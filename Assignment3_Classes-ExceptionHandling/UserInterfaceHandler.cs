@@ -35,6 +35,15 @@ namespace Assignment3_Classes_ExceptionHandling
         }
 
         /*
+         * This method is used to take the data from the table and show it onto the user input fields.
+         * Preferably, this should be used in the update button.
+         */
+        private void AppendToFields()
+        {
+
+        }
+
+        /*
          * This method is used to overwrite a row when called and is used once
          * the user input has been validated and the row has been clicked.
          */

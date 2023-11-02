@@ -176,7 +176,6 @@ namespace Assignment3_Classes_ExceptionHandling
             service.Price = CostUpdater(runningTotal, salesTax);
         }
 
-
         // This is a helper method for the add button where it updates the counter for the row counter.
         // This is just an indicator on how many rows the user has inputted.
         public void UpdateCounter()
@@ -281,11 +280,6 @@ namespace Assignment3_Classes_ExceptionHandling
         {
             Credits credits = new Credits();
             credits.Show();
-        }
-
-        private void Calendar_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
     #endregion
