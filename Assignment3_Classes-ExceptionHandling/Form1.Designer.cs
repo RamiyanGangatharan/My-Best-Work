@@ -129,7 +129,6 @@
             Calender.TabIndex = 7;
             toolTip1.SetToolTip(Calender, "Enter the date of appointment here.");
             Calender.Value = new DateTime(2023, 10, 30, 0, 0, 0, 0);
-            Calender.ValueChanged += Calendar_ValueChanged;
             // 
             // label3
             // 
