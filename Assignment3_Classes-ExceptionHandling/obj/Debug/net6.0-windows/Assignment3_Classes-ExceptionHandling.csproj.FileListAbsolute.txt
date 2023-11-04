@@ -15,4 +15,3 @@ D:\Directory\Durham College\Semester 3\CLASSES\Object Oriented Programming II\C#
 D:\Directory\Durham College\Semester 3\CLASSES\Object Oriented Programming II\C#\COSC_2100_05\Assignment3_Classes-ExceptionHandling\obj\Debug\net6.0-windows\Assignment3_Classes-ExceptionHandling.genruntimeconfig.cache
 D:\Directory\Durham College\Semester 3\CLASSES\Object Oriented Programming II\C#\COSC_2100_05\Assignment3_Classes-ExceptionHandling\obj\Debug\net6.0-windows\ref\Assignment3_Classes-ExceptionHandling.dll
 D:\Directory\Durham College\Semester 3\CLASSES\Object Oriented Programming II\C#\COSC_2100_05\Assignment3_Classes-ExceptionHandling\obj\Debug\net6.0-windows\Assignment3_Classes_ExceptionHandling.UserManual.resources
-D:\Directory\Durham College\Semester 3\CLASSES\Object Oriented Programming II\C#\COSC_2100_05\Assignment3_Classes-ExceptionHandling\obj\Debug\net6.0-windows\Assignment3_Classes_ExceptionHandling.Credits.resources
