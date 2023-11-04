@@ -4,9 +4,6 @@
     <_LastSelectedProfileId>D:\Directory\Durham College\Semester 3\CLASSES\Object Oriented Programming II\C#\COSC_2100_05\Assignment3_Classes-ExceptionHandling\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="Credits.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

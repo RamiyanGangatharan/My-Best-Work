@@ -115,11 +115,62 @@ namespace Assignment3_Classes_ExceptionHandling
         }
 
         /*
+         * This method is used to take the data from the table and show it onto the user input fields.
+         * Preferably, this should be used in the update button.
+         */
+        private void AppendToFields()
+        {
+            // Transferring the textboxes
+            FirstNameRTB.Text = service.firstName;
+            LastNameRTB.Text = service.lastName;
+            PhoneRTB.Text = service.phoneNumber;
+            Calender.Text = service.calendar;
+
+            // Find the index of the item in the ComboBox
+            int MakeComboIndex = MakeComboBox.Items.IndexOf(service.Make);
+
+            // As long as an index exists and is selected, the combo wil be shown.
+            if (MakeComboIndex != -1)
+            {
+                MakeComboBox.SelectedIndex = MakeComboIndex;
+            }
+            else
+            {
+                service.Make = MakeComboBox.Text;
+            }
+
+            ModelRTB.Text = service.Model;
+            YearComboBox.Text = service.Year.ToString();
+            ColourRTB.Text = service.Colour;
+        }
+
+        /*
          * This event handler updates the current selected row where it first checks if a row is selected then overwrites the row selected 
          * with the validated data that the user inputs before clicking the button. This is where I learned about using MessageBox buttons 
          * for the first time where if the user does not select a row, then it displays an error message with one button and does nothing.
          */
         private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            // Check the number of selected items
+            int selectedCount = DataListView.SelectedItems.Count;
+
+            if (selectedCount == 0)
+            {
+                // No row is selected
+                MessageBox.Show("Please select a row to update.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (selectedCount > 1)
+            {
+                // More than one row is selected
+                MessageBox.Show("Please select only one row to update.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else 
+            {
+                AppendToFields();
+            }
+        }
+
+        private void OverwriteButton_Click(object sender, EventArgs e)
         {
             if (DataListView.SelectedItems.Count == 0)
             {
@@ -130,18 +181,22 @@ namespace Assignment3_Classes_ExceptionHandling
             }
             if (!ValidateFields())
             {
+                // Check if all rows are filled
                 MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            else
+            {
+                // Overwrite the row
+                PopulateServiceObject();
 
-            PopulateServiceObject();
+                // Get the selected row, then use the UIHandler class to update the listView item
+                ListViewItem selectedRow = DataListView.SelectedItems[0];
+                UIHandler.UpdateListViewItem(selectedRow, service);
 
-            // Get the selected row, then use the UIHandler class to update the listView item
-            ListViewItem selectedRow = DataListView.SelectedItems[0];
-            UIHandler.UpdateListViewItem(selectedRow, service);
-
-            // Clear input fields
-            ResetButton_Click(sender, e);
+                // Clear input fields
+                ResetButton_Click(sender, e);
+            }
         }
 
         // This is a helper method for the add button to validate the user input.
@@ -273,14 +328,7 @@ namespace Assignment3_Classes_ExceptionHandling
             userManual.Show();
         }
 
-        // This button opens a window for a little credit window, the reasons I have this are:
-        // 1) All the people who helped me with this project
-        // 2) The control surface section needed an eighth button to be aesthetically pleasing
-        private void CreditButton_Click(object sender, EventArgs e)
-        {
-            Credits credits = new Credits();
-            credits.Show();
-        }
+      
     }
     #endregion
 }

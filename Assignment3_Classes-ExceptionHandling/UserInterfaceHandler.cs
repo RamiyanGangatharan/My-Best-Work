@@ -34,14 +34,7 @@ namespace Assignment3_Classes_ExceptionHandling
             }
         }
 
-        /*
-         * This method is used to take the data from the table and show it onto the user input fields.
-         * Preferably, this should be used in the update button.
-         */
-        private void AppendToFields()
-        {
-
-        }
+        
 
         /*
          * This method is used to overwrite a row when called and is used once
@@ -49,15 +42,15 @@ namespace Assignment3_Classes_ExceptionHandling
          */
         public void UpdateListViewItem(ListViewItem item, Service service)
         {
-             item.SubItems[1].Text = service.calendar;
-             item.SubItems[2].Text = service.firstName;
-             item.SubItems[3].Text = service.lastName;
-             item.SubItems[4].Text = service.phoneNumber;
-             item.SubItems[5].Text = service.Make;
-             item.SubItems[6].Text = service.Model;
-             item.SubItems[7].Text = service.Year.ToString();
-             item.SubItems[8].Text = service.Colour;
-             item.SubItems[9].Text = "$" + service.Price.ToString("0.00");
+            item.SubItems[1].Text = service.calendar;
+            item.SubItems[2].Text = service.firstName;
+            item.SubItems[3].Text = service.lastName;
+            item.SubItems[4].Text = service.phoneNumber;
+            item.SubItems[5].Text = service.Make;
+            item.SubItems[6].Text = service.Model;
+            item.SubItems[7].Text = service.Year.ToString();
+            item.SubItems[8].Text = service.Colour;
+            item.SubItems[9].Text = "$" + service.Price.ToString("0.00");
         }
 
         /*
@@ -76,7 +69,7 @@ namespace Assignment3_Classes_ExceptionHandling
                 var control = controls[controller];
                 if (control.GetType() == typeof(RichTextBox))
                 {
-                    RichTextBox rtb = (RichTextBox) control;
+                    RichTextBox rtb = (RichTextBox)control;
                     if (string.IsNullOrWhiteSpace(rtb.Text))
                     {
                         return false;
