@@ -13,10 +13,35 @@
 
     public partial class UserManual : Form
     {
-        public UserManual() 
-        { 
-            InitializeComponent(); 
+        public UserManual() { InitializeComponent(); }
+        private void UserManual_Load(object sender, EventArgs e)
+        {
+            // Researched links because it was interesting 
+            // Add a link to the LinkLabel
+            linkLabel1.Links.Add(0, linkLabel1.Text.Length, "https://youtu.be/dQw4w9WgXcQ");
+
+            // Add to the LinkClicked event
+            linkLabel1.LinkClicked += new LinkLabelLinkClickedEventHandler(linkLabel1_LinkClicked);
+
+            // Add the LinkLabel to the form's controls
+            this.Controls.Add(linkLabel1);
         }
-        private void UserManual_Load(object sender, EventArgs e) { }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Open the link in the default browser
+            try
+            {
+                var psi = new System.Diagnostics.ProcessStartInfo { FileName = e.Link.LinkData.ToString(), UseShellExecute = true };
+                System.Diagnostics.Process.Start(psi);
+            }
+            catch (System.ComponentModel.Win32Exception ex)
+            { MessageBox.Show("Unable to open link. The system cannot find the file specified." + "StackTrace: " + ex); }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

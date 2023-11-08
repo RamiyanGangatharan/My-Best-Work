@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace Assignment3_Classes_ExceptionHandling
+﻿namespace Assignment3_Classes_ExceptionHandling
 {
     /*
     * Author: Ramiyan Gangatharan
@@ -34,7 +32,6 @@ namespace Assignment3_Classes_ExceptionHandling
             }
         }
 
-        
 
         /*
          * This method is used to overwrite a row when called and is used once

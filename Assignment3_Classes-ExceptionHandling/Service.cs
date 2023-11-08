@@ -55,7 +55,7 @@
         // Parameterized Constructor (not used, but kept because of instructions for the assignment)
         public Service
         (
-            string calendar, string firstName, string lastName, string phoneNumber, string Make, string Model, 
+            string calendar, string firstName, string lastName, string phoneNumber, string Make, string Model,
             int Year, string Colour, bool EngOilChange, bool TransOilChange, bool AirFilterChange, decimal Price
         )
         {
