@@ -68,6 +68,12 @@
             label23 = new Label();
             panel12 = new Panel();
             label27 = new Label();
+            panel13 = new Panel();
+            label15 = new Label();
+            label28 = new Label();
+            linkLabel1 = new LinkLabel();
+            panel14 = new Panel();
+            button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -80,6 +86,8 @@
             panel10.SuspendLayout();
             panel11.SuspendLayout();
             panel12.SuspendLayout();
+            panel13.SuspendLayout();
+            panel14.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -128,7 +136,7 @@
             panel1.Controls.Add(label2);
             panel1.Location = new Point(12, 42);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 106);
+            panel1.Size = new Size(250, 95);
             panel1.TabIndex = 4;
             // 
             // panel2
@@ -139,7 +147,7 @@
             panel2.Controls.Add(label3);
             panel2.Location = new Point(268, 42);
             panel2.Name = "panel2";
-            panel2.Size = new Size(250, 106);
+            panel2.Size = new Size(250, 94);
             panel2.TabIndex = 5;
             // 
             // label9
@@ -165,15 +173,15 @@
             panel3.Controls.Add(label10);
             panel3.Controls.Add(label7);
             panel3.Controls.Add(label5);
-            panel3.Location = new Point(524, 42);
+            panel3.Location = new Point(12, 396);
             panel3.Name = "panel3";
-            panel3.Size = new Size(250, 65);
+            panel3.Size = new Size(250, 78);
             panel3.TabIndex = 6;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(35, 24);
+            label10.Location = new Point(49, 30);
             label10.Name = "label10";
             label10.Size = new Size(179, 30);
             label10.TabIndex = 4;
@@ -202,9 +210,9 @@
             panel4.BackColor = Color.LightGray;
             panel4.Controls.Add(label12);
             panel4.Controls.Add(label8);
-            panel4.Location = new Point(12, 155);
+            panel4.Location = new Point(12, 143);
             panel4.Name = "panel4";
-            panel4.Size = new Size(250, 100);
+            panel4.Size = new Size(250, 79);
             panel4.TabIndex = 7;
             // 
             // label12
@@ -231,9 +239,9 @@
             panel6.BackColor = Color.LightGray;
             panel6.Controls.Add(label11);
             panel6.Controls.Add(label18);
-            panel6.Location = new Point(268, 154);
+            panel6.Location = new Point(268, 142);
             panel6.Name = "panel6";
-            panel6.Size = new Size(250, 101);
+            panel6.Size = new Size(250, 80);
             panel6.TabIndex = 2;
             // 
             // label11
@@ -260,15 +268,15 @@
             panel5.BackColor = Color.LightGray;
             panel5.Controls.Add(label16);
             panel5.Controls.Add(label13);
-            panel5.Location = new Point(524, 154);
+            panel5.Location = new Point(269, 395);
             panel5.Name = "panel5";
-            panel5.Size = new Size(250, 101);
+            panel5.Size = new Size(250, 79);
             panel5.TabIndex = 8;
             // 
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(4, 28);
+            label16.Location = new Point(4, 24);
             label16.Name = "label16";
             label16.Size = new Size(237, 45);
             label16.TabIndex = 2;
@@ -289,17 +297,18 @@
             panel7.BackColor = Color.LightGray;
             panel7.Controls.Add(label17);
             panel7.Controls.Add(label14);
-            panel7.Location = new Point(12, 261);
+            panel7.Location = new Point(12, 228);
             panel7.Name = "panel7";
-            panel7.Size = new Size(250, 226);
+            panel7.Size = new Size(250, 162);
             panel7.TabIndex = 9;
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(7, 28);
+            label17.ImageAlign = ContentAlignment.BottomLeft;
+            label17.Location = new Point(6, 28);
             label17.Name = "label17";
-            label17.Size = new Size(233, 165);
+            label17.Size = new Size(241, 120);
             label17.TabIndex = 2;
             label17.Text = resources.GetString("label17.Text");
             // 
@@ -318,7 +327,7 @@
             panel8.BackColor = Color.LightGray;
             panel8.Controls.Add(label25);
             panel8.Controls.Add(label21);
-            panel8.Location = new Point(524, 113);
+            panel8.Location = new Point(522, 42);
             panel8.Name = "panel8";
             panel8.Size = new Size(250, 35);
             panel8.TabIndex = 12;
@@ -347,7 +356,7 @@
             panel9.BackColor = Color.LightGray;
             panel9.Controls.Add(label24);
             panel9.Controls.Add(label20);
-            panel9.Location = new Point(268, 362);
+            panel9.Location = new Point(268, 328);
             panel9.Name = "panel9";
             panel9.Size = new Size(250, 61);
             panel9.TabIndex = 11;
@@ -376,7 +385,7 @@
             panel10.BackColor = Color.LightGray;
             panel10.Controls.Add(label22);
             panel10.Controls.Add(label19);
-            panel10.Location = new Point(268, 261);
+            panel10.Location = new Point(268, 228);
             panel10.Name = "panel10";
             panel10.Size = new Size(250, 95);
             panel10.TabIndex = 10;
@@ -416,17 +425,17 @@
             panel11.BackColor = Color.LightGray;
             panel11.Controls.Add(label26);
             panel11.Controls.Add(label23);
-            panel11.Location = new Point(524, 261);
+            panel11.Location = new Point(524, 79);
             panel11.Name = "panel11";
-            panel11.Size = new Size(250, 226);
+            panel11.Size = new Size(250, 183);
             panel11.TabIndex = 15;
             // 
             // label26
             // 
             label26.AutoSize = true;
-            label26.Location = new Point(4, 28);
+            label26.Location = new Point(4, 29);
             label26.Name = "label26";
-            label26.Size = new Size(222, 195);
+            label26.Size = new Size(222, 150);
             label26.TabIndex = 6;
             label26.Text = resources.GetString("label26.Text");
             // 
@@ -444,20 +453,81 @@
             // 
             panel12.BackColor = Color.LightGray;
             panel12.Controls.Add(label27);
-            panel12.Location = new Point(268, 429);
+            panel12.Location = new Point(524, 365);
             panel12.Name = "panel12";
-            panel12.Size = new Size(250, 58);
+            panel12.Size = new Size(250, 55);
             panel12.TabIndex = 16;
             // 
             // label27
             // 
             label27.AutoSize = true;
             label27.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label27.Location = new Point(12, 12);
+            label27.Location = new Point(4, 10);
             label27.Name = "label27";
-            label27.Size = new Size(220, 34);
+            label27.Size = new Size(219, 34);
             label27.TabIndex = 5;
-            label27.Text = "This app was made with the help of \r\nStephen Senter and Durham College\r\n";
+            label27.Text = "This app was made with the help of \r\nStephen Senter";
+            // 
+            // panel13
+            // 
+            panel13.BackColor = Color.LightGray;
+            panel13.Controls.Add(label15);
+            panel13.Controls.Add(label28);
+            panel13.Location = new Point(524, 268);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(250, 91);
+            panel13.TabIndex = 17;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.ImageAlign = ContentAlignment.BottomLeft;
+            label15.Location = new Point(7, 24);
+            label15.Name = "label15";
+            label15.Size = new Size(230, 60);
+            label15.TabIndex = 2;
+            label15.Text = "The OVERWRITE button takes the input\r\nprovided by the user and replaces the row \r\nselected by the user. Note that the row \r\nmust be selected in order for this to work.";
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label28.Location = new Point(4, 4);
+            label28.Name = "label28";
+            label28.Size = new Size(83, 20);
+            label28.TabIndex = 1;
+            label28.Text = "[Overwrite]";
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Font = new Font("MS Reference Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            linkLabel1.Location = new Point(12, 9);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(140, 19);
+            linkLabel1.TabIndex = 18;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Video Explanation";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
+            // panel14
+            // 
+            panel14.BackColor = Color.LightGray;
+            panel14.Controls.Add(button1);
+            panel14.Location = new Point(524, 426);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(250, 48);
+            panel14.TabIndex = 19;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(88, 15);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 0;
+            button1.Text = "Close";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // UserManual
             // 
@@ -465,7 +535,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
             ClientSize = new Size(784, 509);
+            Controls.Add(linkLabel1);
+            Controls.Add(panel14);
             Controls.Add(panel12);
+            Controls.Add(panel13);
             Controls.Add(panel11);
             Controls.Add(CopyrightLabel);
             Controls.Add(panel8);
@@ -506,6 +579,9 @@
             panel11.PerformLayout();
             panel12.ResumeLayout(false);
             panel12.PerformLayout();
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
+            panel14.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -551,5 +627,11 @@
         private Label label26;
         private Panel panel12;
         private Label label27;
+        private Panel panel13;
+        private Label label15;
+        private Label label28;
+        private LinkLabel linkLabel1;
+        private Panel panel14;
+        private Button button1;
     }
 }

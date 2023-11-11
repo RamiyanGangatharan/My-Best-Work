@@ -118,32 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label17.Text" xml:space="preserve">
-    <value>The UPDATE button essentially overwrites 
-the saved item in the table whilst the user
-is able to edit the file and then press the 
-UPDATE button once more to save it. 
-
-Keep in mind, you must enter the 
-information in the personal information
-and the vehiclular information sections 
-before selecting the table row and clicking 
-the update button in order to update the 
-row, If you dont, it will turn blank.</value>
+    <value>The UPDATE button transfers all information
+in the selected row into the textboxes that 
+the user will interface with. Then use the 
+Overwrite button to actually update the row.
+NOTE: You need to input the checkboxes 
+because I have no clue how to update those 
+and so you can make sure that the right
+ service is being called upon</value>
   </data>
   <data name="label26.Text" xml:space="preserve">
     <value>VSS stands for Vehicle Service Summary.
 This table is used to display the info 
 inserted by the user and the interface.
-
 The second use case for this table is the
 ability to select a row and remove each 
 and individual row without affecting the 
-other rows from the table.
-
-The third and final use case for this table
+other rows from the table. The third and 
+final use case for this table
 is the ability to edit the contents of the
-individual rows in the table.
-
-</value>
+individual rows in the table.</value>
   </data>
 </root>

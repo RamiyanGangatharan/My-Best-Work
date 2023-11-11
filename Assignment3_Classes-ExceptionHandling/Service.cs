@@ -8,13 +8,12 @@
          * Description: This is the Service class where it gets, sets, and modifies the user input.
          */
 
-        // Declarations
-        // declaration of the Count and IdentificationNumber variables as static to be used between classes.
+        // Declarations of the Count and IdentificationNumber variables as static to be used between classes.
         public static int Count = 0;
         public static int IdentificationNumber = 0;
 
         // Getters and setters for each input.
-        public string calendar { get; set; }
+        public string calender { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string phoneNumber { get; set; }
@@ -27,18 +26,11 @@
         public bool AirFilterChange { get; set; }
         public decimal Price { get; set; }
 
-        // This helper method is used to increment the row counter in the table.
-        public static void IncrementCount()
-        {
-            Count++;
-            IdentificationNumber = Count;
-        }
-
         // Default Constructor
         public Service()
         {
             IdentificationNumber = 0;
-            calendar = "1/1/2000";
+            calender = "1/1/2000";
             firstName = "JOHN";
             lastName = "DOE";
             phoneNumber = "555 555 5555";
@@ -55,11 +47,11 @@
         // Parameterized Constructor (not used, but kept because of instructions for the assignment)
         public Service
         (
-            string calendar, string firstName, string lastName, string phoneNumber, string Make, string Model, 
+            string calender, string firstName, string lastName, string phoneNumber, string Make, string Model,
             int Year, string Colour, bool EngOilChange, bool TransOilChange, bool AirFilterChange, decimal Price
         )
         {
-            this.calendar = calendar;
+            this.calender = calender;
             this.firstName = firstName;
             this.lastName = lastName;
             this.phoneNumber = phoneNumber;
@@ -79,7 +71,7 @@
             return
                 $"Service Information:\n" +
                 $"Identification Number: {IdentificationNumber}\n" +
-                $"Date: {calendar}\n" +
+                $"Date: {calender}\n" +
                 $"Name: {firstName} {lastName}\n" +
                 $"Phone Number: {phoneNumber}\n" +
                 $"Make: {Make}\n" +

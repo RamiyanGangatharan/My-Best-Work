@@ -126,7 +126,7 @@
             Calender.Location = new Point(149, 172);
             Calender.Name = "Calender";
             Calender.Size = new Size(113, 27);
-            Calender.TabIndex = 7;
+            Calender.TabIndex = 4;
             toolTip1.SetToolTip(Calender, "Enter the date of appointment here.");
             Calender.Value = new DateTime(2023, 10, 30, 0, 0, 0, 0);
             // 
@@ -154,7 +154,7 @@
             PhoneRTB.Margin = new Padding(4);
             PhoneRTB.Name = "PhoneRTB";
             PhoneRTB.Size = new Size(134, 27);
-            PhoneRTB.TabIndex = 4;
+            PhoneRTB.TabIndex = 3;
             PhoneRTB.Text = "";
             toolTip1.SetToolTip(PhoneRTB, "Enter your telephone number here.");
             // 
@@ -164,7 +164,7 @@
             LastNameRTB.Margin = new Padding(4);
             LastNameRTB.Name = "LastNameRTB";
             LastNameRTB.Size = new Size(255, 30);
-            LastNameRTB.TabIndex = 3;
+            LastNameRTB.TabIndex = 2;
             LastNameRTB.Text = "";
             toolTip1.SetToolTip(LastNameRTB, "Enter your lastname here.");
             // 
@@ -218,7 +218,7 @@
             YearComboBox.Location = new Point(8, 170);
             YearComboBox.Name = "YearComboBox";
             YearComboBox.Size = new Size(100, 28);
-            YearComboBox.TabIndex = 10;
+            YearComboBox.TabIndex = 7;
             toolTip1.SetToolTip(YearComboBox, "Enter the year of the customer's vehicle here.");
             // 
             // ColourRTB
@@ -227,7 +227,7 @@
             ColourRTB.Margin = new Padding(4);
             ColourRTB.Name = "ColourRTB";
             ColourRTB.Size = new Size(100, 28);
-            ColourRTB.TabIndex = 9;
+            ColourRTB.TabIndex = 8;
             ColourRTB.Text = "";
             toolTip1.SetToolTip(ColourRTB, "Enter the colour of the customer's vehicle here.");
             // 
@@ -243,6 +243,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("MS Reference Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label6.Location = new Point(8, 146);
             label6.Name = "label6";
             label6.Size = new Size(46, 20);
@@ -286,7 +287,7 @@
             ModelRTB.Margin = new Padding(4);
             ModelRTB.Name = "ModelRTB";
             ModelRTB.Size = new Size(207, 30);
-            ModelRTB.TabIndex = 2;
+            ModelRTB.TabIndex = 6;
             ModelRTB.Text = "";
             toolTip1.SetToolTip(ModelRTB, "Enter the model of the customer's vehicle here.");
             // 
@@ -297,8 +298,8 @@
             AddButton.Margin = new Padding(4);
             AddButton.Name = "AddButton";
             AddButton.Size = new Size(100, 45);
-            AddButton.TabIndex = 2;
-            AddButton.Text = "Add";
+            AddButton.TabIndex = 12;
+            AddButton.Text = "&Add";
             toolTip1.SetToolTip(AddButton, "Add the service details to the summary below.");
             AddButton.UseVisualStyleBackColor = true;
             AddButton.Click += AddButton_Click;
@@ -310,8 +311,8 @@
             ResetButton.Margin = new Padding(4);
             ResetButton.Name = "ResetButton";
             ResetButton.Size = new Size(100, 45);
-            ResetButton.TabIndex = 3;
-            ResetButton.Text = "Reset";
+            ResetButton.TabIndex = 13;
+            ResetButton.Text = "&Reset";
             toolTip1.SetToolTip(ResetButton, "Clear all input fields and selections.");
             ResetButton.UseVisualStyleBackColor = true;
             ResetButton.Click += ResetButton_Click;
@@ -323,8 +324,8 @@
             UpdateButton.Margin = new Padding(4);
             UpdateButton.Name = "UpdateButton";
             UpdateButton.Size = new Size(100, 45);
-            UpdateButton.TabIndex = 4;
-            UpdateButton.Text = "Update";
+            UpdateButton.TabIndex = 14;
+            UpdateButton.Text = "&Update";
             toolTip1.SetToolTip(UpdateButton, "Update the selected service details in the summary.");
             UpdateButton.UseVisualStyleBackColor = true;
             UpdateButton.Click += UpdateButton_Click;
@@ -336,8 +337,8 @@
             RemoveButton.Margin = new Padding(4);
             RemoveButton.Name = "RemoveButton";
             RemoveButton.Size = new Size(100, 45);
-            RemoveButton.TabIndex = 5;
-            RemoveButton.Text = "Remove";
+            RemoveButton.TabIndex = 16;
+            RemoveButton.Text = "R&emove";
             toolTip1.SetToolTip(RemoveButton, "Remove the selected service details from the summary.");
             RemoveButton.UseVisualStyleBackColor = true;
             RemoveButton.Click += RemoveButton_Click;
@@ -349,8 +350,8 @@
             RemoveAllButton.Margin = new Padding(4);
             RemoveAllButton.Name = "RemoveAllButton";
             RemoveAllButton.Size = new Size(100, 45);
-            RemoveAllButton.TabIndex = 6;
-            RemoveAllButton.Text = "Remove All";
+            RemoveAllButton.TabIndex = 17;
+            RemoveAllButton.Text = "Re&move All";
             toolTip1.SetToolTip(RemoveAllButton, "Clear the entire service summary below.");
             RemoveAllButton.UseVisualStyleBackColor = true;
             RemoveAllButton.Click += RemoveAllButton_Click;
@@ -362,8 +363,8 @@
             ExitButton.Margin = new Padding(4);
             ExitButton.Name = "ExitButton";
             ExitButton.Size = new Size(100, 45);
-            ExitButton.TabIndex = 7;
-            ExitButton.Text = "Exit";
+            ExitButton.TabIndex = 19;
+            ExitButton.Text = "E&xit";
             toolTip1.SetToolTip(ExitButton, "Close the application.");
             ExitButton.UseVisualStyleBackColor = true;
             ExitButton.Click += ExitButton_Click;
@@ -386,12 +387,13 @@
             // AirCheck
             // 
             AirCheck.AutoSize = true;
+            AirCheck.FlatStyle = FlatStyle.Popup;
             AirCheck.Font = new Font("MS Reference Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             AirCheck.Location = new Point(8, 92);
             AirCheck.Margin = new Padding(4);
             AirCheck.Name = "AirCheck";
-            AirCheck.Size = new Size(98, 24);
-            AirCheck.TabIndex = 2;
+            AirCheck.Size = new Size(96, 24);
+            AirCheck.TabIndex = 11;
             AirCheck.Text = "Air Filter";
             toolTip1.SetToolTip(AirCheck, "Check if the vehicle's air filter needs replacement.");
             AirCheck.UseVisualStyleBackColor = true;
@@ -400,12 +402,13 @@
             // EngineCheck
             // 
             EngineCheck.AutoSize = true;
+            EngineCheck.FlatStyle = FlatStyle.Popup;
             EngineCheck.Font = new Font("MS Reference Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             EngineCheck.Location = new Point(8, 60);
             EngineCheck.Margin = new Padding(4);
             EngineCheck.Name = "EngineCheck";
-            EngineCheck.Size = new Size(112, 24);
-            EngineCheck.TabIndex = 0;
+            EngineCheck.Size = new Size(110, 24);
+            EngineCheck.TabIndex = 10;
             EngineCheck.Text = "Engine Oil";
             toolTip1.SetToolTip(EngineCheck, "Check if the vehicle needs an engine oil change.");
             EngineCheck.UseVisualStyleBackColor = true;
@@ -414,12 +417,13 @@
             // TransmissionCheck
             // 
             TransmissionCheck.AutoSize = true;
+            TransmissionCheck.FlatStyle = FlatStyle.Popup;
             TransmissionCheck.Font = new Font("MS Reference Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             TransmissionCheck.Location = new Point(8, 28);
             TransmissionCheck.Margin = new Padding(4);
             TransmissionCheck.Name = "TransmissionCheck";
-            TransmissionCheck.Size = new Size(181, 24);
-            TransmissionCheck.TabIndex = 1;
+            TransmissionCheck.Size = new Size(179, 24);
+            TransmissionCheck.TabIndex = 9;
             TransmissionCheck.Text = "Transmission Fluid";
             toolTip1.SetToolTip(TransmissionCheck, "Check if the vehicle requires a transmission fluid change.");
             TransmissionCheck.UseVisualStyleBackColor = true;
@@ -445,7 +449,7 @@
             DataListView.Margin = new Padding(4);
             DataListView.Name = "DataListView";
             DataListView.Size = new Size(1145, 403);
-            DataListView.TabIndex = 10;
+            DataListView.TabIndex = 20;
             DataListView.UseCompatibleStateImageBehavior = false;
             DataListView.View = View.Details;
             // 
@@ -542,8 +546,8 @@
             CreditButton.Location = new Point(231, 75);
             CreditButton.Name = "CreditButton";
             CreditButton.Size = new Size(100, 45);
-            CreditButton.TabIndex = 9;
-            CreditButton.Text = "Overwrite";
+            CreditButton.TabIndex = 18;
+            CreditButton.Text = "&Overwrite";
             toolTip1.SetToolTip(CreditButton, "View application credits and acknowledgments.");
             CreditButton.UseVisualStyleBackColor = true;
             CreditButton.Click += OverwriteButton_Click;
@@ -554,8 +558,8 @@
             HelpButton.Location = new Point(338, 23);
             HelpButton.Name = "HelpButton";
             HelpButton.Size = new Size(100, 45);
-            HelpButton.TabIndex = 8;
-            HelpButton.Text = "Help";
+            HelpButton.TabIndex = 15;
+            HelpButton.Text = "&Help";
             toolTip1.SetToolTip(HelpButton, "Open the help documentation or FAQ.");
             HelpButton.UseVisualStyleBackColor = true;
             HelpButton.Click += HelpButton_Click;
@@ -649,7 +653,7 @@
             MinimizeBox = false;
             Name = "Window";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Car Repair Shop";
+            Text = "Auto Repair Shop";
             Load += Window_Load;
             PersonalInformation.ResumeLayout(false);
             PersonalInformation.PerformLayout();
