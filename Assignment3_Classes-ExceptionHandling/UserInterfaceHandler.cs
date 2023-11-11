@@ -7,7 +7,6 @@
     */
     internal class UserInterfaceHandler
     {
-
         /*
          * This method clears all of the modifiable user interfaces using a for loop and various
          * if and else if statements where it verifies the type of control and clears it appropriately.

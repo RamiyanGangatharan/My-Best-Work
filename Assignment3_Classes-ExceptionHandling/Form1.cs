@@ -64,8 +64,8 @@ namespace Assignment3_Classes_ExceptionHandling
          * checkboxes with different parameters in order to determine if each individual checkbox is clicked or not. 
         */
         private void TransmissionCheck_CheckedChanged(object sender, EventArgs e) { Checkbox_CheckedChanged(sender, transmissionCost); }
-        private void EngineCheck_CheckedChanged(object sender, EventArgs e) { Checkbox_CheckedChanged(sender, engineCost); }
-        private void AirCheck_CheckedChanged(object sender, EventArgs e) { Checkbox_CheckedChanged(sender, airCost); }
+        private void EngineCheck_CheckedChanged(object sender, EventArgs e)       { Checkbox_CheckedChanged(sender, engineCost); }
+        private void AirCheck_CheckedChanged(object sender, EventArgs e)          { Checkbox_CheckedChanged(sender, airCost); }
 
         /*
          * This function clears all input fields using a for loop using the method ClearControls where it clears all text and checks.
@@ -105,27 +105,27 @@ namespace Assignment3_Classes_ExceptionHandling
                 {
                     // Service --> DataListView
                     // Updates service object with list item selection. SelectedItems[0] == the row you clicked. SubItems[] is the column number in the row.
-                    service.calender = DataListView.SelectedItems[0].SubItems[1].Text;
-                    service.firstName = DataListView.SelectedItems[0].SubItems[2].Text;
-                    service.lastName = DataListView.SelectedItems[0].SubItems[3].Text;
+                    service.calender =    DataListView.SelectedItems[0].SubItems[1].Text;
+                    service.firstName =   DataListView.SelectedItems[0].SubItems[2].Text;
+                    service.lastName =    DataListView.SelectedItems[0].SubItems[3].Text;
                     service.phoneNumber = DataListView.SelectedItems[0].SubItems[4].Text;
-                    service.Make = DataListView.SelectedItems[0].SubItems[5].Text;
-                    service.Model = DataListView.SelectedItems[0].SubItems[6].Text;
-                    if (int.TryParse(DataListView.SelectedItems[0].SubItems[7].Text, out int yearValue)) { service.Year = yearValue; }
-                    service.Colour = DataListView.SelectedItems[0].SubItems[8].Text;
-                    if (decimal.TryParse(DataListView.SelectedItems[0].SubItems[9].Text, out decimal value)) { service.Price = value; }
+                    service.Make =        DataListView.SelectedItems[0].SubItems[5].Text;
+                    service.Model =       DataListView.SelectedItems[0].SubItems[6].Text;
+                    if (int.TryParse     (DataListView.SelectedItems[0].SubItems[7].Text, out int yearValue)) { service.Year = yearValue; }
+                    service.Colour =      DataListView.SelectedItems[0].SubItems[8].Text;
+                    if (decimal.TryParse (DataListView.SelectedItems[0].SubItems[9].Text, out decimal value)) { service.Price = value; }
                 }
 
                 // Transferring the data from textboxes to the service object
                 FirstNameRTB.Text = service.firstName;
-                LastNameRTB.Text = service.lastName;
-                PhoneRTB.Text = service.phoneNumber;
-                Calender.Text = service.calender;
+                LastNameRTB.Text =  service.lastName;
+                PhoneRTB.Text =     service.phoneNumber;
+                Calender.Text =     service.calender;
                 MakeComboBox.SelectedItem = service.Make;
-                ModelRTB.Text = service.Model;
+                ModelRTB.Text =     service.Model;
                 YearComboBox.SelectedItem = service.Year.ToString();
-                ColourRTB.Text = service.Colour;
-                CostRTB.Text = service.Price.ToString();
+                ColourRTB.Text =    service.Colour;
+                CostRTB.Text =      service.Price.ToString();
             }
         }
 
