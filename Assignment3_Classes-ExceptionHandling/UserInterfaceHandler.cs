@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace Assignment3_Classes_ExceptionHandling
+﻿namespace Assignment3_Classes_ExceptionHandling
 {
     /*
     * Author: Ramiyan Gangatharan
@@ -9,6 +7,7 @@ namespace Assignment3_Classes_ExceptionHandling
     */
     internal class UserInterfaceHandler
     {
+
         /*
          * This method clears all of the modifiable user interfaces using a for loop and various
          * if and else if statements where it verifies the type of control and clears it appropriately.
@@ -19,30 +18,17 @@ namespace Assignment3_Classes_ExceptionHandling
             for (int controller = 0; controller < controls.Length; controller++)
             {
                 var control = controls[controller];
-                if (control.GetType() == typeof(CheckBox))
-                {
-                    ((CheckBox)control).Checked = false;
-                }
-                else if (control.GetType() == typeof(ComboBox))
-                {
-                    ((ComboBox)control).SelectedIndex = defaultIndex;
-                }
-                else if (control.GetType() == typeof(RichTextBox))
-                {
-                    ((RichTextBox)control).Clear();
-                }
+                if (control.GetType() == typeof(CheckBox)) { ((CheckBox)control).Checked = false; }
+                else if (control.GetType() == typeof(ComboBox)) { ((ComboBox)control).SelectedIndex = defaultIndex; }
+                else if (control.GetType() == typeof(RichTextBox)) { ((RichTextBox)control).Clear(); }
             }
         }
 
-        
 
-        /*
-         * This method is used to overwrite a row when called and is used once
-         * the user input has been validated and the row has been clicked.
-         */
+        // This method is used to overwrite a row when called and is used once the user input has been validated and the row has been clicked.
         public void UpdateListViewItem(ListViewItem item, Service service)
         {
-            item.SubItems[1].Text = service.calendar;
+            item.SubItems[1].Text = service.calender;
             item.SubItems[2].Text = service.firstName;
             item.SubItems[3].Text = service.lastName;
             item.SubItems[4].Text = service.phoneNumber;
@@ -54,13 +40,8 @@ namespace Assignment3_Classes_ExceptionHandling
         }
 
         /*
-         * This method validates all user input fields so that the right
-         * information is appended to the table. 
-         * 
-         * The method is validating the following:
-         *      - If the input is empty
-         *      - If the input is null
-         *      - If the input is just whitespace
+         * This method validates all user input fields so that the right information is appended to the table.
+         * The method is validating if the input is empty, null, or just whitespace.
          */
         public bool ValidateFields(Control[] controls)
         {
